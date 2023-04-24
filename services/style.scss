@@ -1,0 +1,72 @@
+// paleta de colores
+$gris-claro: #D3D3D3 ;
+$blanco: #FFFFFF ;
+$azul-claro: #87CEEB;
+$azul-oscuro: #1E90FF;
+$gris-oscuro: #A9A9A9;
+$verde-claro: #32CD32;
+$Verde-oscuro: #006400;
+$errores:  #FF0000;
+$negro: #000000;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+    .services-container{
+        width: 50%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3 , 200px);
+        grid-template-rows: repeat(3, 150px);
+        grid-gap: 20px;
+        
+        .service{
+            position: relative;
+            background-color: $blanco;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0px 5px 15px darkgrey;
+            overflow: hidden;
+            &:hover{
+                height: fit-content;
+                overflow: visible;
+            }
+            h4{
+                border-width: 20px;
+                border-block-end: solid 2px $gris-oscuro ;
+                padding-block-end: 10px ;
+            }
+            .icon-service{
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                text-align: center;
+                background-color: #87CEEB;
+                margin: auto;
+                margin-block: 11px;
+
+                .icon{
+                    color: $blanco;
+                    font-size:50px;
+                    padding-top: 15px;
+                }
+            }
+            .cost{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                input{
+                    border-radius: 20px;
+                    background-color: $blanco;
+                    border: 1px solid $gris-claro;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
+
+  

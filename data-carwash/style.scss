@@ -1,0 +1,58 @@
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+// paleta de colores
+$gris-claro: #D3D3D3 ;
+$blanco: #FFFFFF ;
+$azul-claro: #87CEEB;
+$azul-oscuro: #1E90FF;
+$gris-oscuro: #A9A9A9;
+$verde-claro: #32CD32;
+$Verde-oscuro: #006400;
+$errores:  #FF0000;
+$negro: #000000;
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.container{
+    width: 100%;
+    
+    details{
+        margin: 0 auto;
+        width: 70%;
+        summary{
+            list-style: none;
+            padding: 10px;
+            border-block-end: solid 4px $gris-claro;
+            cursor: pointer;
+            &::before{
+                content: "\f130";
+                width: 10px;
+                height: 10px;
+            }
+            h4{
+                display: inline;
+            }
+        }
+        .content{
+            display: flex;
+            align-items: center;
+            .data-container{
+                width: 500px;
+
+            }
+            .img-container{
+                width: 500px;
+                height:auto;
+                img{
+                    max-width: 100%;
+                    max-height: 100%;
+                    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+
+                }
+            }
+        }
+
+}
+}
