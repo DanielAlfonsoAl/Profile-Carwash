@@ -5,13 +5,61 @@
 
 .container {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+}
+.container .filter-services {
+  width: 70%;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 5px 15px darkgrey;
+  margin: auto;
+}
+.container .filter-services .category {
+  position: relative;
+  display: flex;
+  border-radius: 0.5rem;
+  background-color: #EEE;
+  box-sizing: border-box;
+  box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+  padding: 0.25rem;
+  width: 70%;
+  font-size: 14px;
+}
+.container .filter-services .category .category-container {
+  flex: 1 1 auto;
+  text-align: center;
+}
+.container .filter-services .category .category-container .name {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.5rem 0;
+  color: rgb(51, 65, 85);
+  transition: all 0.15s ease-in-out;
+}
+.container .filter-services .category .category-container input {
+  display: none;
+}
+.container .filter-services .category .category-container input:checked + .name {
+  background-color: #fff;
+  font-weight: 600;
 }
 .container .services-container {
   width: 50%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 200px);
-  grid-template-rows: repeat(3, 150px);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
   grid-gap: 20px;
 }
 .container .services-container .service {
@@ -23,9 +71,7 @@
   overflow: hidden;
 }
 .container .services-container .service:hover {
-  height: -moz-fit-content;
-  height: fit-content;
-  overflow: visible;
+  transform: scale(1.05);
 }
 .container .services-container .service h4 {
   border-width: 20px;
@@ -54,8 +100,15 @@
   justify-content: space-between;
 }
 .container .services-container .service .cost input {
+  color: #1E90FF;
   border-radius: 20px;
   background-color: #FFFFFF;
-  border: 1px solid #D3D3D3;
-  padding: 10px;
+  border: 2px solid #D3D3D3;
+  padding: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.container .services-container .service .cost input:hover {
+  background-color: #87CEEB;
+  color: #FFFFFF;
 }/*# sourceMappingURL=style.css.map */

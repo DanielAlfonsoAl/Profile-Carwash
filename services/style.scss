@@ -15,12 +15,63 @@ $negro: #000000;
 }
 .container{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+    .filter-services{
+        width: 70%;
+        height: 70px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 10px;
+        background-color: $blanco;
+        box-shadow: 0px 5px 15px darkgrey;
+        margin: auto;
+      
+        .category {
+            position: relative;
+            display: flex;
+            border-radius: 0.5rem;
+            background-color: #EEE;
+            box-sizing: border-box;
+            box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+            padding: 0.25rem;
+            width: 70%;
+            font-size: 14px;
+                .category-container {
+                flex: 1 1 auto;
+                text-align: center;
+                       .name {
+                        display: flex;
+                        cursor: pointer;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 0.5rem;
+                        border: none;
+                        padding: .5rem 0;
+                        color: rgba(51, 65, 85, 1);
+                        transition: all .15s ease-in-out;
+                    }
+                        input {
+                    display: none;
+                    }
+                    input:checked + .name {
+                        background-color: #fff;
+                        font-weight: 600;
+                      }
+                }
+          }
+       
+    
+    }
     .services-container{
         width: 50%;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: repeat(3 , 200px);
-        grid-template-rows: repeat(3, 150px);
+        grid-template-columns: repeat(3 , 1fr);
+        grid-template-rows: repeat(3, auto) ;
         grid-gap: 20px;
         
         .service{
@@ -31,9 +82,9 @@ $negro: #000000;
             box-shadow: 0px 5px 15px darkgrey;
             overflow: hidden;
             &:hover{
-                height: fit-content;
-                overflow: visible;
+                transform: scale(1.05);
             }
+
             h4{
                 border-width: 20px;
                 border-block-end: solid 2px $gris-oscuro ;
@@ -59,10 +110,18 @@ $negro: #000000;
                 align-items: center;
                 justify-content: space-between;
                 input{
+                    color: #1E90FF;
                     border-radius: 20px;
                     background-color: $blanco;
-                    border: 1px solid $gris-claro;
-                    padding: 10px;
+                    border: 2px solid $gris-claro;
+                    padding: 5px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: $azul-claro;
+                        color: $blanco;
+                        
+                    }
                 }
             }
         }
