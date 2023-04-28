@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="imgs" id="slider">
+                <div class="img"><img id="img_1" src="./assets/img 1.jpg" alt=""></div>
+                <div class="img"> <img id="img_2" src="./assets/img 2.jpg" alt=""></div>
+                <div class="img"><img id="img_3" src="./assets/img 3.jpg" alt=""></div>
+                <div class="img"><img id="img_4" src="./assets/img 4.jpg" alt=""></div>   
+            </div>
+            <div class="buttons">
+                <div class="controlers">
+                    <input type="button" value="" onclick="mover('0')">
+                    <input type="button" value="" onclick="mover('-100%')">
+                    <input type="button" value="" onclick="mover('-200%')">
+                    <input type="button" value="" onclick="mover('-300%')">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const mover = (tamaño) =>{
+
+            let slide = document.getElementById('slider');
+
+            slide.style.animation = 'none';
+            slide.style.marginLeft = tamaño;
+
+        }
+    </script>
+    
+</body>
+</html>

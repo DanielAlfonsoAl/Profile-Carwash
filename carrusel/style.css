@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+}
+.container .content {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.container .content .imgs {
+  width: 400%;
+  display: flex;
+  animation: slide 16s infinite alternate ease-in-out;
+}
+.container .content .imgs .img {
+  width: 100%;
+}
+.container .content .imgs .img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 16/9;
+}
+.container .buttons {
+  width: 100%;
+  position: absolute;
+  top: 95%;
+}
+.container .buttons .controlers {
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+.container .buttons .controlers input {
+  width: 50px;
+  height: 5px;
+  border: none;
+  background-color: lightgray;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.container .buttons .controlers input:hover {
+  background-color: rgb(172, 172, 172);
+  transform: scale(1.1);
+}
+
+@keyframes slide {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+  75% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -300%;
+  }
+}/*# sourceMappingURL=style.css.map */
